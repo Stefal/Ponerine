@@ -1037,7 +1037,9 @@ class MPonerine(ScreenManager):
         cam.msgbusy = 0
         break
     # Sync Camera Time, range of: (0,8,16,24,32,40,48,56)
-    t = self.synctime + '%02d' %(number * 8)
+    # LINE DISABLED TO KEEP THE CAM IN TIME
+    #t = self.synctime + '%02d' %(number * 8)
+    t = self.synctime + '%02d' %(0 * 8)
     setok = cam.setok
     cam.ChangeSetting("camera_clock",t)
     setok.wait(10)
